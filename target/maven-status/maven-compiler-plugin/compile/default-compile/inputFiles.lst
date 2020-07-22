@@ -1,0 +1,12 @@
+/home/usuario/alura/java/DesignPatterns/src/main/java/br/com/abruzzo/strategy/Orcamento.java
+/home/usuario/alura/java/DesignPatterns/src/main/java/br/com/abruzzo/chainOfResponsibility/SemDescontoFimCorrente.java
+/home/usuario/alura/java/DesignPatterns/src/main/java/br/com/abruzzo/chainOfResponsibility/DescontoMaisCincoItens.java
+/home/usuario/alura/java/DesignPatterns/src/main/java/br/com/abruzzo/strategy/ISS.java
+/home/usuario/alura/java/DesignPatterns/src/main/java/br/com/abruzzo/strategy/Imposto.java
+/home/usuario/alura/java/DesignPatterns/src/main/java/br/com/abruzzo/chainOfResponsibility/Desconto.java
+/home/usuario/alura/java/DesignPatterns/src/main/java/br/com/abruzzo/strategy/CalculadorImpostos.java
+/home/usuario/alura/java/DesignPatterns/src/main/java/br/com/abruzzo/chainOfResponsibility/Orcamento.java
+/home/usuario/alura/java/DesignPatterns/src/main/java/br/com/abruzzo/strategy/ICMS.java
+/home/usuario/alura/java/DesignPatterns/src/main/java/br/com/abruzzo/chainOfResponsibility/DescontoValorMaior500.java
+/home/usuario/alura/java/DesignPatterns/src/main/java/br/com/abruzzo/chainOfResponsibility/Item.java
+/home/usuario/alura/java/DesignPatterns/src/main/java/br/com/abruzzo/designpatterns/Principal.java

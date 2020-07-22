@@ -1,0 +1,12 @@
+br/com/abruzzo/chainOfResponsibility/Orcamento.class
+br/com/abruzzo/chainOfResponsibility/DescontoValorMaior500.class
+br/com/abruzzo/strategy/ISS.class
+br/com/abruzzo/chainOfResponsibility/Item.class
+br/com/abruzzo/strategy/CalculadorImpostos.class
+br/com/abruzzo/strategy/ICMS.class
+br/com/abruzzo/strategy/Imposto.class
+br/com/abruzzo/chainOfResponsibility/DescontoMaisCincoItens.class
+br/com/abruzzo/strategy/Orcamento.class
+br/com/abruzzo/chainOfResponsibility/Desconto.class
+br/com/abruzzo/designpatterns/Principal.class
+br/com/abruzzo/chainOfResponsibility/SemDescontoFimCorrente.class
