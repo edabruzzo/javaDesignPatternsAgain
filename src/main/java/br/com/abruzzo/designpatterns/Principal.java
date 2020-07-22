@@ -6,10 +6,16 @@
 
 package br.com.abruzzo.designpatterns;
 
+import br.com.abruzzo.chainOfResponsibility.Conta;
 import br.com.abruzzo.chainOfResponsibility.DescontoLapisCaneta;
 import br.com.abruzzo.chainOfResponsibility.DescontoMaisCincoItens;
 import br.com.abruzzo.chainOfResponsibility.DescontoValorMaior500;
+import br.com.abruzzo.chainOfResponsibility.Formato;
 import br.com.abruzzo.chainOfResponsibility.Item;
+import br.com.abruzzo.chainOfResponsibility.Requisicao;
+import br.com.abruzzo.chainOfResponsibility.RespostaJSON;
+import br.com.abruzzo.chainOfResponsibility.RespostaNaoFormatada;
+import br.com.abruzzo.chainOfResponsibility.RespostaXML;
 import br.com.abruzzo.chainOfResponsibility.SemDescontoFimCorrente;
 import br.com.abruzzo.strategy.CalculadorImpostos;
 import br.com.abruzzo.strategy.ICMS;
@@ -55,7 +61,26 @@ public class Principal {
         double descontoCalculado = cadeiaResponsabilidade.calcula(orcamento);
         System.out.println("Desconto calculado =  "+ descontoCalculado);
         
-    
+        
+        
+        Conta conta1 = new Conta();
+        conta1.setTitular("Emmanuel");
+        
+        RespostaJSON resposta = new RespostaJSON(
+                                                 new RespostaXML(
+                                                         new RespostaNaoFormatada()));
+        
+        Requisicao requisicao = new Requisicao();
+        requisicao.setConta(conta1);
+        requisicao.setFormato(Formato.XML);
+        resposta.responde(requisicao);
+        
+        requisicao = new Requisicao();
+        requisicao.setConta(conta1);
+        requisicao.setFormato(Formato.JSON);
+        resposta.responde(requisicao);
+        
+        
     }
 
 }
