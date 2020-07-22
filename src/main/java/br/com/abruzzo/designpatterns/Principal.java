@@ -6,6 +6,7 @@
 
 package br.com.abruzzo.designpatterns;
 
+import br.com.abruzzo.chainOfResponsibility.DescontoLapisCaneta;
 import br.com.abruzzo.chainOfResponsibility.DescontoMaisCincoItens;
 import br.com.abruzzo.chainOfResponsibility.DescontoValorMaior500;
 import br.com.abruzzo.chainOfResponsibility.Item;
@@ -46,7 +47,11 @@ public class Principal {
         br.com.abruzzo.chainOfResponsibility.Orcamento orcamento = new br.com.abruzzo.chainOfResponsibility.Orcamento();
         orcamento.adicionaItem(new Item(501));
         
-        DescontoMaisCincoItens cadeiaResponsabilidade = new DescontoMaisCincoItens(new DescontoValorMaior500(new SemDescontoFimCorrente()));
+        DescontoMaisCincoItens cadeiaResponsabilidade = new DescontoMaisCincoItens(
+                                                                new DescontoValorMaior500(
+                                                                        new DescontoLapisCaneta(
+                                                                            new SemDescontoFimCorrente())));
+    
         double descontoCalculado = cadeiaResponsabilidade.calcula(orcamento);
         System.out.println("Desconto calculado =  "+ descontoCalculado);
         
