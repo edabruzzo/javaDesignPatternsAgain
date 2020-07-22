@@ -6,6 +6,7 @@
 
 package br.com.abruzzo.chainOfResponsibility;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,6 +17,12 @@ import java.util.List;
 public class Orcamento {
     
    private List<Item> listaItens;
+
+    public Orcamento() {
+        listaItens = new ArrayList<Item>();
+    }
+   
+   
 
     public List<Item> getListaItens() {
         return listaItens;
