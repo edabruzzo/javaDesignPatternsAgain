@@ -20,6 +20,11 @@ import br.com.abruzzo.strategy.CalculadorImpostos;
 import br.com.abruzzo.strategy.ICMS;
 import br.com.abruzzo.strategy.ISS;
 import br.com.abruzzo.strategy.Orcamento;
+import decorator.FiltraSaldoAcimaValor;
+import decorator.Filtro;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -80,7 +85,35 @@ public class Principal {
 
         Orcamento orcamento = new Orcamento(500);
         CalculadorImpostos.calculaImposto(orcamento, new ISS(new ICMS()));
+        
+        Conta contaA = new Conta();
+        contaA.setDataAbertura(new Date());
+        contaA.setTitular("Emmanuel");
+        contaA.setSaldo(1000000);
+        
 
+        Conta contaB = new Conta();
+        contaB.setDataAbertura(new Date());
+        contaB.setTitular("Fulano");
+        contaB.setSaldo(1000);
+        
+        
+        List<Conta> listaContasParaAnalise = new ArrayList<Conta>();
+        listaContasParaAnalise.add(contaA);
+        listaContasParaAnalise.add(contaB);
+        
+        Filtro filtro = new FiltraSaldoAcimaValor();
+        List<Conta> listaContasFiltradas = filtro.listaContasFiltradas(listaContasParaAnalise);
+        
+        for(Conta conta : listaContasFiltradas){
+            
+            System.out.println(conta.getDataAbertura());
+            System.out.println(conta.getTitular());
+            System.out.println(conta.getSaldo());
+
+        }
+        
+        
     }
 
 }

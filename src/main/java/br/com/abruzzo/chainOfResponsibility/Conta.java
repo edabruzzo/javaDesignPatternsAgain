@@ -6,6 +6,8 @@
 
 package br.com.abruzzo.chainOfResponsibility;
 
+import java.util.Date;
+
 /**
  *
  * @author Emmanuel de Oliveira D'Abruzzo
@@ -14,6 +16,26 @@ package br.com.abruzzo.chainOfResponsibility;
 public class Conta {
     
     private String titular;
+    private double saldo;
+    private Date dataAbertura;
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    public Date getDataAbertura() {
+        return dataAbertura;
+    }
+
+    public void setDataAbertura(Date dataAbertura) {
+        this.dataAbertura = dataAbertura;
+    }
+    
+    
 
     public String getTitular() {
         return titular;
