@@ -16,7 +16,7 @@ public class CalculadorImpostos {
     
     public static void calculaImposto(Orcamento orcamento, Imposto imposto){
         
-        double impostoCalculado = imposto.calcular(orcamento);
+        double impostoCalculado = imposto.calcular(orcamento, 0);
         System.out.println(impostoCalculado);
         
     }
